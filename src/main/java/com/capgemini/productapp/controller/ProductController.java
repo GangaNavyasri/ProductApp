@@ -34,7 +34,7 @@ public class ProductController {
 		try {
 			Product product1 = productService.findProductById(product.getProductId());
 			if (product1 != null)
-				return new ResponseEntity<Product>(productService.updateProduct(product1), HttpStatus.OK);
+				return new ResponseEntity<Product>(productService.updateProduct(product), HttpStatus.OK);
 		} catch (ProductNotFoundException exception) {
 
 		}
